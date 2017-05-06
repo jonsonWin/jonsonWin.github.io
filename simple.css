@@ -1,0 +1,39 @@
+* {
+	transition: all 1s;
+}
+
+.block {
+	background: #222;
+	height: 100px;
+	width: 500px;
+	margin: 5px auto;
+	border-radius: 15px;
+	position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+	.block {
+		width: 300px;
+		background: #ddd;
+	}
+
+	.second, .third {
+		height: 50px;
+	}
+
+	p {
+		color: blue;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.block:after {
+		content: 'Five element';
+		position: absolute;
+		top: 10px; left: -10px;
+		background: green;
+		color: red;
+		border-radius: 5px;
+		padding: 10px;
+	}
+}
